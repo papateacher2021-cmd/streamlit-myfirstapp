@@ -34,8 +34,9 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
-st.checkbox('Show a secret message')
-if st.checkbox('Show a secret message'):
+# Fix for StreamlitDuplicateElementId error
+show_secret = st.checkbox('Show a secret message')
+if show_secret:
     st.success("You found the secret!")
 
 st.button('Click me')
