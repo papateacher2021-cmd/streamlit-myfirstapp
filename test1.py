@@ -34,13 +34,14 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
-# Fix for StreamlitDuplicateElementId error
+# Fix for StreamlitDuplicateElementId error (checkbox)
 show_secret = st.checkbox('Show a secret message')
 if show_secret:
     st.success("You found the secret!")
 
-st.button('Click me')
-if st.button('Click me'):
+# Fix for StreamlitDuplicateElementId error (button)
+button_clicked = st.button('Click me')
+if button_clicked:
     st.info('Button clicked!')
 
 st.subheader("Displaying Data")
